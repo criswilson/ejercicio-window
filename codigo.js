@@ -1,10 +1,11 @@
-let alto = window.screen.height;
-let ancho = window.screen.width;
+let href = window.location.href;
+let pathName = window.location.pathname;
+let protocol = window.location.protocol;
+let hostName = window.location.hostname;
 
-let comprar = confirm(`El alto es ${alto}, el ancho es ${ancho}`);
+let html = `Protocolo: <b>${protocol}</b><br>`;
+html += `Hostname: <b>${hostName}</b><br>`;
+html += `Pathname: <b>${pathName}</b><br>`;
+html += `URL Completa: <b>${href}</b><br>`;
 
-if (comprar) {
-  alert(`Compra realizada exitosamente`);
-} else {
-  alert(`Compra cancelada`);
-}
+document.write(html);
